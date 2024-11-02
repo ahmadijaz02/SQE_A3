@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="Failed suite [AllModulesSuite]" guice-stage="DEVELOPMENT">
+  <parameter name="password" value="pass"/>
+  <parameter name="username" value="user"/>
+  <test thread-count="5" parallel="classes" name="UserManagementTestSuite(failed)">
+    <groups>
+      <run>
+        <include name="loginTests"/>
+        <include name="profileTests"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="test.UserAuthenticationTests">
+        <methods>
+          <include name="testLoginWithExcelData"/>
+        </methods>
+      </class> <!-- test.UserAuthenticationTests -->
+    </classes>
+  </test> <!-- UserManagementTestSuite(failed) -->
+</suite> <!-- Failed suite [AllModulesSuite] -->
